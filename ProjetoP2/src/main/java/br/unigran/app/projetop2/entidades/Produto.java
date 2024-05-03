@@ -4,10 +4,7 @@
  */
 package br.unigran.app.projetop2.entidades;
 
-/**
- *
- * @author laboratorio
- */
+
 public class Produto {
     
 }
