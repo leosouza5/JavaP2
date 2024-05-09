@@ -5,6 +5,8 @@
 package br.unigran.app.projetop2.entidades;
 
 import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
@@ -21,6 +23,5 @@ public class Funcionario{
     private String cargo;
     private String funcao;
     private Float salario;
-    
-    
+    private Login login;
 }
