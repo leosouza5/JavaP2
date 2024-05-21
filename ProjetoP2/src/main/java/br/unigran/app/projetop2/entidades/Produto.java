@@ -1,30 +1,42 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package br.unigran.app.projetop2.entidades;
 
-<<<<<<< HEAD
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
 import lombok.Getter;
 import lombok.Setter;
+
 /**
  *
  * @author laboratorio
  */
 @Getter
-@Setter
-=======
 
->>>>>>> 891acb15c4e9b3585e66c782f8b8727738311b56
+@Setter
+@Entity
 public class Produto {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(name="marca", length=255)
     private String marca;
+    @Column(name="categoria", length=255)
     private String cateoria;
+    @Column(length = 10, precision = 2)
     private Double precoCusto;
+    @Column(length = 10, precision = 2)
     private Double precoVenda;
-    private Fornecedor idFornecedor;
+    @Column(name="fornecedor", length=255)
+    private String Fornecedor;
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date dataValidade;
+    @Column(length = 10, precision = 2)
     private Double qtdMinimo;
+    @Column(length = 10, precision = 2)
     private Double qtdEstoque;
 }
