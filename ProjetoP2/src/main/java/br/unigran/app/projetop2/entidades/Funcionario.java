@@ -5,23 +5,42 @@
 package br.unigran.app.projetop2.entidades;
 
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-
+@Entity
 public class Funcionario{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(name = "nome",length = 55)
     private String nomeCompleto;
+    @Column(name = "cpf",length = 11)
     private String CPF;
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date datNascimento;
+    @Column(name = "sexo",length = 30)
     private String sexo;
+    @Column(name = "telefone",length = 55)
     private String telefone;
-    private String email;
-    private String dtAdmissao;
+    @Column(name = "email",length = 55)
+    private String email;    
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date dtAdmissao;
+    @Column(name = "cargo",length = 55)
     private String cargo;
+    @Column(name = "funcao",length = 55)
     private String funcao;
-    private Float salario;
+    @Column(name = "salario",length = 55)
+    private Double salario;
+    
     private Login login;
 }
