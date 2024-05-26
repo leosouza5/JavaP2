@@ -1,5 +1,6 @@
-package br.unigran.app.projetop2.entidades;
+package br.unigran.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +19,7 @@ import lombok.Setter;
 
 @Setter
 @Entity
-public class Produto {
+public class Produto implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
