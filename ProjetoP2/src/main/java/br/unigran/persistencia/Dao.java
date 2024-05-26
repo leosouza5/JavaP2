@@ -1,18 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package br.unigran.app.projetop2.persistencia;
+package br.unigran.persistencia;
 
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-/**
- *
- * @author andre
- */
 public class Dao {
    private static Dao entidade;
    private final EntityManagerFactory  emf;
@@ -51,12 +43,13 @@ public class Dao {
         em.getTransaction().commit();
     }
     public  List listar(Class c, String where){
-        return em.createNativeQuery("select o from "+c.getSimpleName()+" o where 1=1 "+where)
+        return em.createNativeQuery("select o from "+ c.getSimpleName() +" o where 1=1 "+where)
                 .getResultList();
     }
 
     void remove(Integer id, Class clazz) {
         em.getTransaction().begin();
       //  em.remove();
-        em.getTransaction().commit();    }
+        em.getTransaction().commit();    
+    }
 }

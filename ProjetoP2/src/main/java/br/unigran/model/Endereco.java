@@ -1,5 +1,5 @@
 
-package br.unigran.app.projetop2.entidades;
+package br.unigran.model;
 
 import java.io.Serializable;
 import java.util.List;
@@ -13,18 +13,20 @@ import javax.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
 @Setter
+@Getter
 @Entity
-public class Cidade implements Serializable{
+public class Endereco implements Serializable{
 
-    @OneToMany(mappedBy = "cidade")
-    private List<Endereco> enderecos;
+    @OneToMany(mappedBy = "endereco")
+    private List<Entrada> entradas;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
-    @Column(name="nome",length = 55)
-    private String nome;
+    @Column(name = "logradouro",length = 244)
+    private String logradouro;
+    @Column(name = "cep",length = 55)
+    private String cep;
     @ManyToOne
-    private Estado estado;
+    private Cidade cidade;
 }

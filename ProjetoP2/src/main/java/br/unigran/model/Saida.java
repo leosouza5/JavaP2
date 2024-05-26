@@ -1,5 +1,5 @@
 
-package br.unigran.app.projetop2.entidades;
+package br.unigran.model;
 
 import java.io.Serializable;
 import java.util.Date;
