@@ -23,7 +23,7 @@ public class Produto implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     @Column(name="marca", length=255)
     private String marca;
     @Column(name="categoria", length=255)

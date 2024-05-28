@@ -22,7 +22,7 @@ public class Cidade implements Serializable{
     private List<Endereco> enderecos;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     @Column(name="nome",length = 55)
     private String nome;
     @ManyToOne

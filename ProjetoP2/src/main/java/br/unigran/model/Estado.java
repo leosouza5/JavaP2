@@ -18,7 +18,7 @@ import lombok.Setter;
 public class Estado implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     @OneToMany(mappedBy = "estado")
     private List<Cidade> cidades;
     @Column(name = "nmEstado",length = 55)
