@@ -8,6 +8,8 @@ package br.unigran.dto;
  *
  * @author Leonardo
  */
-public class DTO {
-    
+public abstract class DTO {
+        public String id;
+        public abstract Object builder();
 }
+

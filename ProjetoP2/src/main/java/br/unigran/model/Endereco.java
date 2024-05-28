@@ -1,6 +1,5 @@
 
 package br.unigran.model;
-
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Column;
@@ -17,12 +16,13 @@ import lombok.Setter;
 @Getter
 @Entity
 public class Endereco implements Serializable{
+    
 
     @OneToMany(mappedBy = "endereco")
     private List<Entrada> entradas;
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer id;
+    private Long id;
     @Column(name = "logradouro",length = 244)
     private String logradouro;
     @Column(name = "cep",length = 55)

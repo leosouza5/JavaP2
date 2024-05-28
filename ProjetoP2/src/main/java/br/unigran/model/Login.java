@@ -17,7 +17,7 @@ import lombok.Setter;
 public class Login implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     @Column(name="nome", length=255)
     private String nome;
     @Column(name="senha", length=255)

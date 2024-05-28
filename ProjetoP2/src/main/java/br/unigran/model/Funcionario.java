@@ -21,7 +21,7 @@ import lombok.Setter;
 public class Funcionario{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     @Column(name = "nome",length = 55)
     private String nomeCompleto;
     @Column(name = "cpf",length = 11)
@@ -38,8 +38,6 @@ public class Funcionario{
     private Date dtAdmissao;
     @Column(name = "cargo",length = 55)
     private String cargo;
-    @Column(name = "funcao",length = 55)
-    private String funcao;
     @Column(name = "salario",length = 55)
     private Double salario;
     
