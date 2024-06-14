@@ -1,8 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package br.unigran.app.projetop2;
+
+import br.unigran.view.login.TelaLogin;
 
 /**
  *
@@ -11,6 +9,11 @@ package br.unigran.app.projetop2;
 public class ProjetoP2 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // Cria e exibe a tela de login
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TelaLogin().setVisible(true);
+            }
+        });
     }
 }
